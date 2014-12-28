@@ -10,7 +10,7 @@
  */
 var cbpBGSlideshow = (function() {
 
-	var $slideshow = $( '#cbp-bislideshow' ),
+	var $slideshow = $( '#slideShow' ),
 		$items = $slideshow.children( 'li' ),
 		itemsCount = $items.length,
 		$controls = $( '#cbp-bicontrols' ),
