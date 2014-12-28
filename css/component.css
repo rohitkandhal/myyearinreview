@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-.cbp-bislideshow {
+.slideShow {
 	list-style: none;
 	width: 100%;
 	height: 100%;
@@ -21,7 +21,7 @@
 	margin: 0;
 }
 
-.cbp-bislideshow li {
+.slideShow li {
 	position: absolute;
 	width: 101%;
 	height: 101%;
@@ -35,7 +35,7 @@
 
 /* If background-size supported we'll add the images to the background of the li */
 
-.backgroundsize .cbp-bislideshow li {
+.backgroundsize .slideShow li {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -43,11 +43,11 @@
 }
 
 /* ...and hide the images */
-.backgroundsize .cbp-bislideshow li img {
+.backgroundsize .slideShow li img {
 	display: none;
 }
 
-.cbp-bislideshow li img {
+.slideShow li img {
 	display: block;
 	width: 100%;
 }
@@ -119,10 +119,10 @@ span.cbp-biprev:before {
 
 /* Fallback */
 
-.no-js.no-backgroundsize .cbp-bislideshow li:first-child {
+.no-js.no-backgroundsize .slideShow li:first-child {
 	opacity: 1;
 }
 
-.no-js.backgroundsize .cbp-bislideshow li:first-child img {
+.no-js.backgroundsize .slideShow li:first-child img {
 	display: block;
 }
