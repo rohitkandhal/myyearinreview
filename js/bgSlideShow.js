@@ -74,9 +74,9 @@ var cbpBGSlideshow = (function() {
 		{ title: "Materialism", subTitle: "First Good Sound System"},
 		{ title: "Materialism", subTitle: "And These"},
 		{ title: "Materialism", subTitle: "And This"},
-		{ title: "Materialism", subTitle: "Ok. This Is Just For Pic"},
+		{ title: "Materialism", subTitle: "Just For Pic"},
 		{ title: "Materialism", subTitle: "Long Drive Alone w/ Punjabi Music (700m)"},
-		{ title: "Thank You!! It's Been a Great Year", subTitle: "Looking Forward To Another Rocking Next Year"}
+		{ title: "Thank You!! It's Been a Great Year", subTitle: "Looking Forward To Another Rocking Year"}
 		];
 
 
