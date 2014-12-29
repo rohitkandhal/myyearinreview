@@ -68,7 +68,7 @@ var cbpBGSlideshow = (function() {
 		{ title: "Naughtiness", subTitle: "I am BatMan"},
 		{ title: "Naughtiness", subTitle: "Game of Wines"},
 		{ title: "Naughtiness", subTitle: "Ahem Ahem... Entrepreneur at Work"},
-		{ title: "Naughtiness", subTitle: "Oopsss... another one"},
+		{ title: "Naughtiness", subTitle: "Oopsss... Another One"},
 		{ title: "Naughtiness", subTitle: "Papa kehte h bada naam karega"},
 		{ title: "Naughtiness", subTitle: "Kid with Google Glass"},
 		{ title: "Materialism", subTitle: "First Good Sound System"},

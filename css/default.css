@@ -78,76 +78,36 @@ a:hover {
 	display: block;
 	font-weight: 700;
 	font-size: 1.9em;
+	font-family: 'Hammersmith One', sans-serif;
 	text-transform: uppercase;
-	padding: 0 0 0.4em 0.4em;
+	padding: 5px 0 0.4em 0.4em;
 	letter-spacing: 0.2em;
 }
 
-.container > header nav {
+.container > header button {
 	float: right;
-}
-
-.container > header nav a {
 	display: block;
-	float: left;
-	position: relative;
-	width: 2.5em;
-	height: 2.5em;
+	position: fixed;
+	width: 3em;
+	height: 3em;
 	background: #fff;
 	border-radius: 50%;
-	color: transparent;
+	
 	margin: 0 0.1em;
 	border: 4px solid #47a3da;
-	text-indent: -8000px;
+	left: 80%;
+	top: 5em;
+	color: black;
 }
 
-.container > header nav a:after {
-	content: attr(data-info);
-	color: #47a3da;
-	position: absolute;
-	width: 600%;
-	top: 120%;
-	text-align: right;
-	right: 0;
-	opacity: 0;
-	pointer-events: none;
-}
-
-.container > header nav a:hover:after {
-	opacity: 1;
-}
-
-.container > header nav a:hover {
+.container > header button:hover {
 	background: #47a3da;
 }
 
-.icon-drop:before, 
-.icon-arrow-left:before {
-	font-family: 'fontawesome';
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 2;
-	text-align: center;
-	color: #47a3da;
-	-webkit-font-smoothing: antialiased;
-	text-indent: 8000px;
-	padding-left: 8px;
-}
-
-.container > header nav a:hover:before {
+.container > header button:hover:before {
 	color: #fff;
 }
 
-.icon-drop:before {
-	content: "\e000";
+.icon-music:before{
+	content: url('../images/micon.png');
 }
-
-.icon-arrow-left:before {
-	content: "\f060";
-}
-
