@@ -45,8 +45,8 @@ var cbpBGSlideshow = (function() {
 		{ title: "People", subTitle: "Jolly Fellas"},
 		{ title: "People", subTitle: "The Entrepreneur"},
 		{ title: "People", subTitle: "Serious Colleagues"},
-		{ title: "Travel", subTitle: "Best thing I did this year"},
-		{ title: "Travel", subTitle: "This picture doesn't do Justice"},
+		{ title: "Travel", subTitle: "Best Thing I Did This Year"},
+		{ title: "Travel", subTitle: "This Picture Does No Justice"},
 		{ title: "Travel", subTitle: "Mountains, Ocean, Long Drive"},
 		{ title: "Travel", subTitle: "Sunset @ Seattle"},
 		{ title: "Travel", subTitle: "Sunrise @ OuterBanks"},
@@ -56,12 +56,12 @@ var cbpBGSlideshow = (function() {
 		{ title: "Career", subTitle: "Masters - Check"},
 		{ title: "Career", subTitle: "The Excitement"},
 		{ title: "Career", subTitle: "Work or $$$"},
-		{ title: "Experiences", subTitle: "'just' 1 in whole year"},
+		{ title: "Experiences", subTitle: "'just' 1 In Whole Year"},
 		{ title: "Experiences", subTitle: "^..^..^..^..^"},
-		{ title: "Experiences", subTitle: "Yoga - A Journey to Inner Peace"},
+		{ title: "Experiences", subTitle: "Yoga - A Journey To Inner Peace"},
 		{ title: "Naughtiness", subTitle: "Spoiler Alert"},
-		{ title: "Naughtiness", subTitle: "This is mine"},
-		{ title: "Naughtiness", subTitle: "Kandy - Tu ni bachega =)"},
+		{ title: "Naughtiness", subTitle: "This Is Mine"},
+		{ title: "Naughtiness", subTitle: "Kandy - Tu ni Bachega =)"},
 		{ title: "Naughtiness", subTitle: "Bunu 101"},
 		{ title: "Naughtiness", subTitle: "Bunu's Makeup 101"},
 		{ title: "Naughtiness", subTitle: "Sirji's Moto Racer Fever"},
@@ -182,6 +182,14 @@ var cbpBGSlideshow = (function() {
 		clearTimeout( slideshowtime );
 	}
 
+	function toggleMusic(){
+		var player = $( "#musicPlayer");
+		if(player.paused){
+			player.play();
+		}else{
+			player.pause();
+		}
+	}
 	return { init : init };
 
 })();
