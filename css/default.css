@@ -64,7 +64,7 @@ a:hover {
 .container > header #headerWrapper {
     background-color: #000;
     opacity: 0.5;
-    width: 75%;
+    width: 80%;
 }
 
 .container > header h1 {
@@ -88,8 +88,8 @@ a:hover {
 	float: right;
 	display: block;
 	position: fixed;
-	width: 3em;
-	height: 3em;
+	width: 3.5em;
+	height: 3.5em;
 	background: #fff;
 	border-radius: 50%;
 	
