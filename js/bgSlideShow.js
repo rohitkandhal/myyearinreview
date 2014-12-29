@@ -55,7 +55,7 @@ var cbpBGSlideshow = (function() {
 		{ title: "Travel", subTitle: "High Tides"},
 		{ title: "Career", subTitle: "Masters - Check"},
 		{ title: "Career", subTitle: "The Excitement"},
-		{ title: "Career", subTitle: "Work or $$$"},
+		{ title: "Career", subTitle: "Great Opportunities + $$$"},
 		{ title: "Experiences", subTitle: "'just' 1 In Whole Year"},
 		{ title: "Experiences", subTitle: "^..^..^..^..^"},
 		{ title: "Experiences", subTitle: "Yoga - A Journey To Inner Peace"},
@@ -82,11 +82,11 @@ var cbpBGSlideshow = (function() {
 
 	function init( config ) {
 
+		updateTitles(0);
+
 		// preload the images
 		$slideshow.imagesLoaded( function() {
 			
-			updateTitles(0);
-
 			if( Modernizr.backgroundsize ) {
 				$items.each( function() {
 					var $item = $( this );
