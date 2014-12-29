@@ -34,7 +34,7 @@ var cbpBGSlideshow = (function() {
 	var desc = [
 		{ title: "A Look Back - 2014" , subTitle: "Its time to look back and reflect on all that was accomplished throughout the year, and extend gratitude to everyone for their love and support."},
 		{ title: "People", subTitle: "School Buddies"},
-		{ title: "People", subTitle: "Laugh Buddies"},
+		{ title: "People", subTitle: "Masti Gang"},
 		{ title: "People", subTitle: "Delhi Gang w/ Uncle"},
 		{ title: "People", subTitle: "Audi Wale Bhaiya"},
 		{ title: "People", subTitle: "Smile @Sunrise"},
@@ -45,9 +45,9 @@ var cbpBGSlideshow = (function() {
 		{ title: "People", subTitle: "Jolly Fellas"},
 		{ title: "People", subTitle: "The Entrepreneur"},
 		{ title: "People", subTitle: "Serious Colleagues"},
-		{ title: "Travel", subTitle: "Best Thing I Did This Year"},
-		{ title: "Travel", subTitle: "This Picture Doesn't Do Justice"},
-		{ title: "Travel", subTitle: "Mountains, Ocean, Drive"},
+		{ title: "Travel", subTitle: "Best thing I did this year"},
+		{ title: "Travel", subTitle: "This picture doesn't do Justice"},
+		{ title: "Travel", subTitle: "Mountains, Ocean, Long Drive"},
 		{ title: "Travel", subTitle: "Sunset @ Seattle"},
 		{ title: "Travel", subTitle: "Sunrise @ OuterBanks"},
 		{ title: "Travel", subTitle: "Olympic National Park"},
@@ -55,26 +55,26 @@ var cbpBGSlideshow = (function() {
 		{ title: "Travel", subTitle: "High Tides"},
 		{ title: "Career", subTitle: "Masters - Check"},
 		{ title: "Career", subTitle: "The Excitement"},
-		{ title: "Career", subTitle: "Work"},
-		{ title: "Experiences", subTitle: "'just' One In Whole Year"},
+		{ title: "Career", subTitle: "Work or $$$"},
+		{ title: "Experiences", subTitle: "'just' 1 in whole year"},
 		{ title: "Experiences", subTitle: "^..^..^..^..^"},
-		{ title: "Experiences", subTitle: "Yoga - A Journey To Inner Peace"},
+		{ title: "Experiences", subTitle: "Yoga - A Journey to Inner Peace"},
 		{ title: "Naughtiness", subTitle: "Spoiler Alert"},
-		{ title: "Naughtiness", subTitle: "This Is Mine"},
-		{ title: "Naughtiness", subTitle: "Kandy - Tu Ni Bachega =)"},
+		{ title: "Naughtiness", subTitle: "This is mine"},
+		{ title: "Naughtiness", subTitle: "Kandy - Tu ni bachega =)"},
 		{ title: "Naughtiness", subTitle: "Bunu 101"},
 		{ title: "Naughtiness", subTitle: "Bunu's Makeup 101"},
 		{ title: "Naughtiness", subTitle: "Sirji's Moto Racer Fever"},
-		{ title: "Naughtiness", subTitle: "I Am BatMan"},
+		{ title: "Naughtiness", subTitle: "I am BatMan"},
 		{ title: "Naughtiness", subTitle: "Game of Wines"},
-		{ title: "Naughtiness", subTitle: "Ahem Ahem... Entrepreneur At Work"},
-		{ title: "Naughtiness", subTitle: "Oopsss"},
-		{ title: "Naughtiness", subTitle: "...."},
-		{ title: "Naughtiness", subTitle: "Kid With Google Glass"},
+		{ title: "Naughtiness", subTitle: "Ahem Ahem... Entrepreneur at Work"},
+		{ title: "Naughtiness", subTitle: "Oopsss... another one"},
+		{ title: "Naughtiness", subTitle: "Papa kehte h bada naam karega"},
+		{ title: "Naughtiness", subTitle: "Kid with Google Glass"},
 		{ title: "Materialism", subTitle: "First Good Sound System"},
 		{ title: "Materialism", subTitle: "And These"},
 		{ title: "Materialism", subTitle: "And This"},
-		{ title: "Materialism", subTitle: "Just For Pic"},
+		{ title: "Materialism", subTitle: "Just for Pic"},
 		{ title: "Random", subTitle: "Long Drive Alone w/ Punjabi Music (700m)"},
 		{ title: "Thank You!! It's Been a Great Year", subTitle: "Looking Forward To Another Rocking Year"}
 		];
@@ -85,8 +85,7 @@ var cbpBGSlideshow = (function() {
 		// preload the images
 		$slideshow.imagesLoaded( function() {
 			
-			$title.text(desc[0].title);
-			$subTitle.text(desc[0].subTitle);
+			updateTitles(0);
 
 			if( Modernizr.backgroundsize ) {
 				$items.each( function() {
@@ -108,6 +107,11 @@ var cbpBGSlideshow = (function() {
 
 		} );
 		
+	}
+
+	function updateTitles(index){
+		$title.text(desc[index].title);
+		$subTitle.text(desc[index].subTitle);	
 	}
 
 	function initEvents() {
@@ -159,9 +163,7 @@ var cbpBGSlideshow = (function() {
 		$oldItem.css( 'opacity', 0 );
 		$newItem.css( 'opacity', 1 );
 
-
-		$title.text(desc[current].title);
-		$subTitle.text(desc[current].subTitle);
+		updateTitles(current);
 	}
 
 	function startSlideshow() {
