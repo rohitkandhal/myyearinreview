@@ -12,6 +12,9 @@ var cbpBGSlideshow = (function() {
 
 	var $slideshow = $( '#slideShow' ),
 		$items = $slideshow.children( 'li' ),
+		$title = $( '#headerTitle'),
+		$subTitle = $( '#headerSubTitle'),
+
 		itemsCount = $items.length,
 		$controls = $( '#cbp-bicontrols' ),
 		navigation = {
@@ -28,11 +31,63 @@ var cbpBGSlideshow = (function() {
 		// it takes 3.5 seconds to change the background image
 		interval = 3500;
 
+	var desc = [
+		{ title: "A Look Back - 2014" , subTitle: "Its the time to look back and reflect on all that was accomplished throughout the year, and extend gratitude to everyone for their love and support."},
+		{ title: "People", subTitle: "School Buddies"},
+		{ title: "People", subTitle: "Laugh Buddies"},
+		{ title: "People", subTitle: "Delhi Gang w/ Uncle"},
+		{ title: "People", subTitle: "Audi Wale Bhaiya"},
+		{ title: "People", subTitle: "Smile @Sunrise"},
+		{ title: "People", subTitle: "Beauties"},
+		{ title: "People", subTitle: "The Partiers"},
+		{ title: "People", subTitle: "The Smart Ones"},
+		{ title: "People", subTitle: "Longtime Friend"},
+		{ title: "People", subTitle: "Jolly Friends"},
+		{ title: "People", subTitle: "The Entrepreneur"},
+		{ title: "People", subTitle: "Colleagues"},
+		{ title: "Travel", subTitle: "Best Thing I Did This Year"},
+		{ title: "Travel", subTitle: "This Picture Doesn't Do Justice"},
+		{ title: "Travel", subTitle: "Mountain, Ocean, Drive"},
+		{ title: "Travel", subTitle: "Sunset @ Seattle"},
+		{ title: "Travel", subTitle: "Sunrise @ OuterBanks"},
+		{ title: "Travel", subTitle: "Olympic National Park"},
+		{ title: "Travel", subTitle: "Downtown Seattle"},
+		{ title: "Travel", subTitle: "High Tides"},
+		{ title: "Career", subTitle: "Masters - Check"},
+		{ title: "Career", subTitle: "The Excitement"},
+		{ title: "Career", subTitle: "Work"},
+		{ title: "Experiences", subTitle: "'just' One In Whole Year"},
+		{ title: "Experiences", subTitle: "^..^..^..^.."},
+		{ title: "Experiences", subTitle: "Yoga - A Journey To Inner Peace"},
+		{ title: "Naughtiness", subTitle: "Spoiler Alert"},
+		{ title: "Naughtiness", subTitle: "This Is Mine"},
+		{ title: "Naughtiness", subTitle: "Kandy - Tu Ni Bachega =)"},
+		{ title: "Naughtiness", subTitle: "Bunu 101"},
+		{ title: "Naughtiness", subTitle: "Bunu's Makeup 101"},
+		{ title: "Naughtiness", subTitle: "Sirji's Moto Racer Fever"},
+		{ title: "Naughtiness", subTitle: "I Am BatMan"},
+		{ title: "Naughtiness", subTitle: "Game of Wines"},
+		{ title: "Naughtiness", subTitle: "Ahem Ahem"},
+		{ title: "Naughtiness", subTitle: "Oopsss"},
+		{ title: "Naughtiness", subTitle: "...."},
+		{ title: "Naughtiness", subTitle: "Kid With Google Glass"},
+		{ title: "Materialism", subTitle: "First Good Sound System"},
+		{ title: "Materialism", subTitle: "And These"},
+		{ title: "Materialism", subTitle: "And This"},
+		{ title: "Materialism", subTitle: "Ok. This Is Just For Pic"},
+		{ title: "Materialism", subTitle: "Long Drive Alone w/ Punjabi Music (700m)"},
+		{ title: "Thank You!! It's Been a Great Year", subTitle: "Looking Forward To Another Rocking Next Year"}
+		];
+
+
 	function init( config ) {
 
 		// preload the images
 		$slideshow.imagesLoaded( function() {
 			
+			$title.text(desc[0].title);
+			$subTitle.text(desc[0].subTitle);
+
 			if( Modernizr.backgroundsize ) {
 				$items.each( function() {
 					var $item = $( this );
@@ -43,6 +98,7 @@ var cbpBGSlideshow = (function() {
 				$slideshow.find( 'img' ).show();
 				// for older browsers add fallback here (image size and centering)
 			}
+
 			// show first item
 			$items.eq( current ).css( 'opacity', 1 );
 			// initialize/bind the events
@@ -103,6 +159,9 @@ var cbpBGSlideshow = (function() {
 		$oldItem.css( 'opacity', 0 );
 		$newItem.css( 'opacity', 1 );
 
+
+		$title.text(desc[current].title);
+		$subTitle.text(desc[current].subTitle);
 	}
 
 	function startSlideshow() {
