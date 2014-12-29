@@ -29,7 +29,7 @@ var cbpBGSlideshow = (function() {
 		// true if the slideshow is active
 		isSlideshowActive = true,
 		// it takes 3.5 seconds to change the background image
-		interval = 3500;
+		interval = 4000;
 
 	var desc = [
 		{ title: "A Look Back - 2014" , subTitle: "Its time to look back and reflect on all that was accomplished throughout the year, and extend gratitude to everyone for their love and support."},
@@ -57,7 +57,7 @@ var cbpBGSlideshow = (function() {
 		{ title: "Career", subTitle: "The Excitement"},
 		{ title: "Career", subTitle: "Work"},
 		{ title: "Experiences", subTitle: "'just' One In Whole Year"},
-		{ title: "Experiences", subTitle: "^..^..^..^..^^"},
+		{ title: "Experiences", subTitle: "^..^..^..^..^"},
 		{ title: "Experiences", subTitle: "Yoga - A Journey To Inner Peace"},
 		{ title: "Naughtiness", subTitle: "Spoiler Alert"},
 		{ title: "Naughtiness", subTitle: "This Is Mine"},
@@ -75,7 +75,7 @@ var cbpBGSlideshow = (function() {
 		{ title: "Materialism", subTitle: "And These"},
 		{ title: "Materialism", subTitle: "And This"},
 		{ title: "Materialism", subTitle: "Just For Pic"},
-		{ title: "Materialism", subTitle: "Long Drive Alone w/ Punjabi Music (700m)"},
+		{ title: "Random", subTitle: "Long Drive Alone w/ Punjabi Music (700m)"},
 		{ title: "Thank You!! It's Been a Great Year", subTitle: "Looking Forward To Another Rocking Year"}
 		];
 
