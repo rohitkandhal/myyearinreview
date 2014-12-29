@@ -111,7 +111,10 @@ var cbpBGSlideshow = (function() {
 
 	function updateTitles(index){
 		$title.text(desc[index].title);
-		$subTitle.text(desc[index].subTitle);	
+
+		$subTitle.fadeOut("fast", function(){
+			$subTitle.text(desc[index].subTitle)
+		}).fadeIn("slow");		
 	}
 
 	function initEvents() {
@@ -182,14 +185,6 @@ var cbpBGSlideshow = (function() {
 		clearTimeout( slideshowtime );
 	}
 
-	function toggleMusic(){
-		var player = $( "#musicPlayer");
-		if(player.paused){
-			player.play();
-		}else{
-			player.pause();
-		}
-	}
 	return { init : init };
 
 })();
