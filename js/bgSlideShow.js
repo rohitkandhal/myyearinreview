@@ -32,7 +32,7 @@ var cbpBGSlideshow = (function() {
 		interval = 3500;
 
 	var desc = [
-		{ title: "A Look Back - 2014" , subTitle: "Its the time to look back and reflect on all that was accomplished throughout the year, and extend gratitude to everyone for their love and support."},
+		{ title: "A Look Back - 2014" , subTitle: "Its time to look back and reflect on all that was accomplished throughout the year, and extend gratitude to everyone for their love and support."},
 		{ title: "People", subTitle: "School Buddies"},
 		{ title: "People", subTitle: "Laugh Buddies"},
 		{ title: "People", subTitle: "Delhi Gang w/ Uncle"},
@@ -42,12 +42,12 @@ var cbpBGSlideshow = (function() {
 		{ title: "People", subTitle: "The Partiers"},
 		{ title: "People", subTitle: "The Smart Ones"},
 		{ title: "People", subTitle: "Longtime Friend"},
-		{ title: "People", subTitle: "Jolly Friends"},
+		{ title: "People", subTitle: "Jolly Fellas"},
 		{ title: "People", subTitle: "The Entrepreneur"},
 		{ title: "People", subTitle: "Colleagues"},
 		{ title: "Travel", subTitle: "Best Thing I Did This Year"},
 		{ title: "Travel", subTitle: "This Picture Doesn't Do Justice"},
-		{ title: "Travel", subTitle: "Mountain, Ocean, Drive"},
+		{ title: "Travel", subTitle: "Mountains, Ocean, Drive"},
 		{ title: "Travel", subTitle: "Sunset @ Seattle"},
 		{ title: "Travel", subTitle: "Sunrise @ OuterBanks"},
 		{ title: "Travel", subTitle: "Olympic National Park"},
