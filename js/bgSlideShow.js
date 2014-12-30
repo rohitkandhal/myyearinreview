@@ -56,7 +56,7 @@ var cbpBGSlideshow = (function() {
 		{ title: "Career", subTitle: "Masters - Check"},
 		{ title: "Career", subTitle: "The Excitement"},
 		{ title: "Career", subTitle: "Great Opportunities + $$$"},
-		{ title: "Experiences", subTitle: "'just' 1 In Whole Year"},
+		{ title: "Experiences", subTitle: "'just' 1 Relationship In Whole Year"},
 		{ title: "Experiences", subTitle: "^..^..^..^..^"},
 		{ title: "Experiences", subTitle: "Yoga - A Journey To Inner Peace"},
 		{ title: "Celebration", subTitle: "Tera Bhai Got Married"},
