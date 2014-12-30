@@ -29,7 +29,7 @@ var cbpBGSlideshow = (function() {
 		// true if the slideshow is active
 		isSlideshowActive = true,
 		// it takes 3.5 seconds to change the background image
-		interval = 4000;
+		interval = 3500;
 
 	var desc = [
 		{ title: "A Look Back - 2014" , subTitle: "Its time to look back and reflect on all that was accomplished throughout the year, and extend gratitude to everyone for their love and support."},
