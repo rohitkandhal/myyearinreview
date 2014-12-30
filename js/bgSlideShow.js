@@ -14,7 +14,7 @@ var cbpBGSlideshow = (function() {
 		$items = $slideshow.children( 'li' ),
 		$title = $( '#headerTitle'),
 		$subTitle = $( '#headerSubTitle'),
-
+		$musicControlBtn = $( '#musicControlBtn'),
 		itemsCount = $items.length,
 		$controls = $( '#cbp-bicontrols' ),
 		navigation = {
@@ -105,6 +105,7 @@ var cbpBGSlideshow = (function() {
 			// start the slideshow
 			startSlideshow();
 
+			toggleMusic();
 		} );
 		
 	}
@@ -146,6 +147,8 @@ var cbpBGSlideshow = (function() {
 			}
 		} );
 
+		$musicControlBtn.on( 'click', toggleMusic);
+
 	}
 
 	function navigate( direction ) {
@@ -183,6 +186,19 @@ var cbpBGSlideshow = (function() {
 	function stopSlideshow() {
 		isSlideshowActive = false;
 		clearTimeout( slideshowtime );
+	}
+
+	function toggleMusic(){
+		var player = document.getElementById('musicPlayer'); 
+		var button = document.getElementById('musicControlBtn');
+
+		if(player.paused){
+			button.className = "icon-stop-music";
+			player.play();
+		}else{
+			button.className = "icon-play-music";
+			player.pause();
+		}
 	}
 
 	return { init : init };

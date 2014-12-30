@@ -12,13 +12,16 @@
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
+		<audio loop="loop" preload="auto" id="musicPlayer">  
+			<source src="res/back.mp3" />  
+		</audio> 
 		<div class="container">
 			<header class="clearfix">
 				<div id="headerWrapper">
 					<span id="headerTitle"></span>
 					<h1 id="headerSubTitle"></h1>
 				</div>
-				<button type="button" class="icon-music"></button>
+				<button type="button" id="musicControlBtn"></button>
 			</header>	
 			<div class="main">
 				<ul id="slideShow" class="slideShow">
