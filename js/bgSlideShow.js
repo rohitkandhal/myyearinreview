@@ -14,14 +14,15 @@ var cbpBGSlideshow = (function() {
 		$items = $slideshow.children( 'li' ),
 		$title = $( '#headerTitle'),
 		$subTitle = $( '#headerSubTitle'),
-		$musicControlBtn = $( '#musicControlBtn'),
+		$musicControlBtn = document.getElementById('musicControlBtn'),
 		itemsCount = $items.length,
-		$controls = $( '#cbp-bicontrols' ),
+		$controls = document.getElementById('cbp-bicontrols'),
 		navigation = {
-			$navPrev : $controls.find( 'span.cbp-biprev' ),
-			$navNext : $controls.find( 'span.cbp-binext' ),
-			$navPlayPause : $controls.find( 'span.cbp-bipause' )
+			$navPrev : $controls.getElementsByClassName( 'cbp-biprev' )[0],
+			$navNext : $controls.getElementsByClassName( 'cbp-binext' )[0],
+			$navPlayPause : $controls.getElementsByClassName( 'cbp-bipause' )[0]
 		},
+
 		// current item´s index
 		current = 0,
 		// timeout
@@ -120,8 +121,7 @@ var cbpBGSlideshow = (function() {
 
 	function initEvents() {
 
-		navigation.$navPlayPause.on( 'click', function() {
-
+		function playPauseSlideShow(){
 			var $control = $( this );
 			if( $control.hasClass( 'cbp-biplay' ) ) {
 				$control.removeClass( 'cbp-biplay' ).addClass( 'cbp-bipause' );
@@ -130,25 +130,27 @@ var cbpBGSlideshow = (function() {
 			else {
 				$control.removeClass( 'cbp-bipause' ).addClass( 'cbp-biplay' );
 				stopSlideshow();
-			}
+			}						
+		}
 
-		} );
-
-		navigation.$navPrev.on( 'click', function() { 
+		function prevSlide(){
 			navigate( 'prev' ); 
 			if( isSlideshowActive ) { 
 				startSlideshow(); 
 			} 
-		} );
-		navigation.$navNext.on( 'click', function() { 
+		}
+
+		function nextSlide(){
 			navigate( 'next' ); 
 			if( isSlideshowActive ) { 
 				startSlideshow(); 
 			}
-		} );
+		}
 
-		$musicControlBtn.on( 'click', toggleMusic);
-
+		EventUtil.addHandler(navigation.$navPlayPause, "click", playPauseSlideShow);
+		EventUtil.addHandler(navigation.$navPrev, "click", prevSlide);
+		EventUtil.addHandler(navigation.$navNext, "click", nextSlide);
+		EventUtil.addHandler($musicControlBtn, "click", toggleMusic);
 	}
 
 	function navigate( direction ) {
